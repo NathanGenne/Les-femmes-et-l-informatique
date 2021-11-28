@@ -25,6 +25,11 @@ header:hover {
     background: rgba(0, 0, 0, 0.8);
 }
 
+img {
+    display: flex;
+    align-items: center;
+}
+
 .timeline {
     width: 80%;
     margin: 20px auto;
@@ -57,37 +62,26 @@ header:hover {
     margin: 5px 0 0 0;
     border-radius: 6px;
 }
-.timeline .date {
+.timeline .year {
     display: block;
-    width: 60px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     padding: 5px 0;
     position: absolute;
     top: 0;
     left: 50%;
-    margin: 0 0 0 -32px; /*décallage des modules de date de 30px (moitié du diamètre du cercle) + 2px (largeur de la ligne de temps)*/
+    margin: 20px 0 0 -52px; /*décallage des modules de date de 30px (moitié du diamètre du cercle) + 2px (largeur de la ligne de temps)*/
     border-radius: 100%;
     font-size: 12px;
     font-weight: 900;
     text-transform: uppercase;
+    text-align: center;
     background: #25303B;
     color: rgba(255,255,255,0.5);
     border: 2px solid rgba(255,255,255,0.2);
-    box-shadow: 0 0 0 7px #25303B; /*stylise */
+    box-shadow: 0 0 0 7px #25303B; /* sépare le block date de la ligne chronologique */
 }
-.timeline .date span {
-    display: block;
-    text-align: center;
-}
-.timeline .day {
-    font-size: 10px;
-}
-.timeline .month {
-    font-size: 18px;
-}
-.timeline .year {
-    font-size: 10px;
-}
+
 .timeline .inner h2 {
     padding: 15px;
     margin: 0;
