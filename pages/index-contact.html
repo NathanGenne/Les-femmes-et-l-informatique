@@ -4,76 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Ligne de lien vers le framework bootstraps (reset css inclu)-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="assets/css/styles.css" rel="stylesheet">
-    <title>First bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="../assets/css/styles.css" rel="stylesheet">
+    <title>Femmes&Informatique</title>
 </head>
 <body>
     <header>
-        <div class="jumbotron text-center">
-            <h1 class="display-5">Ma première page Bootstrap 4</h1>
-            <p class="lead">En redimensionnant la page dans le navigateur, on voit le responsive en action</p>
-        </div>
+        <a href="../index.html"><div class="h5">Accueil</div></a>
+        <div class="h2">Contactez-nous <span>!</span></div>
+        <a href="../pages/index-contact.html"><div class="h5">Contact</div></a>
     </header>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="navbar-brand" href="#">Navbar</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Lien</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Lien</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Lien</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <p class="h1">A propos de moi</p>
-                <p class="h4">Ma photo :</p>
-                <img src="assets/img/portrait-user-unsplash.jpg" class="img-fluid rounded" alt="Responsive image">
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                <h1 class="display-5">Quelques liens :</h1>
-                <p class="lead">Lorem ipsum dolor sit amet :</p>
-                <ul class="nav flex-column nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Lien actif</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Lien</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Lien</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Lien désactivé</a>
-                    </li>
-                  </ul>
+    <section class="d-flex flex-column justify-content-center contact">
+        <form action="" method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nom</label>
+                <input type="name" class="form-control" id="name" aria-describedby="firstname">
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Prénom</label>
+                <input type="name" class="form-control" id="name" aria-describedby="name">
+            </div>
+            <div class="mb-3">
+              <label for="inputMail" class="form-label">Adresse mail</label>
+              <input type="email" class="form-control" id="inputMail" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Votre mail est sécurisé et ne sera pas diffusé</div>
+            </div>
 
+            <div class="form-floating">
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                  <option selected>Quelle fut votre pionnière préférée ?</option>
+                  <option value="1">Ada Lovelace</option>
+                  <option value="2">Hedy Lamarr</option>
+                  <option value="3">Jean Bartik</option>
+                  <option value="4">Grace Hopper</option>
+                  <option value="5">Margaret Hamilton</option>
+                </select>
             </div>
-            <div class="col-sm-8">
-                <p class="h1">Un grand titre</p>
-                <p class="h4">Un sous titre, 2 nov. 2021</p>
-                <img src="assets/img/pano1-unsplash.jpg" class="img-fluid rounded" alt="Responsive image">
-                <p class="lead">bla bla bla...</p>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam sem et tortor consequat...</p>
-                <p class="h1">Un grand titre</p>
-                <p class="h4">Un sous titre, 2 nov. 2021</p>
-                <img src="assets/img/pano2-unsplash.jpg" class="img-fluid rounded" alt="Responsive image">
-                <p class="lead">bla bla bla...</p>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam sem et tortor consequat...</p>
+
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="commentary" style="height: 100px"></textarea>
+                <label for="commentary">Donnez nous vos impressions...</label>
             </div>
-        </div>
-    </div>
-    <p class="h4 jumbotron text-center">footer</p>
+
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="check">
+              <label class="form-check-label" for="check">J'ai lu et accepté les <a href="mentions.html">mentions légales</a></label>
+            </div>
+          </form>
+        <a class="btn btn-warning" href="index-history.html" onClick="alert('Merci pour votre avis !')"; role="button">Envoyer</a>
+    </section>
 </body>
-<footer>
-
-</footer>
 </html>

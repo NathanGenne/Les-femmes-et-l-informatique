@@ -3,7 +3,7 @@ html, body {
     background: #25303B;
 }
 a {text-decoration: none;}
-header a:link,header a:visited,header a:hover,header a:active { text-decoration: none; color: rgb(201, 201, 201);}
+header a:link,header a:visited,header a:hover,header a:active, footer a { text-decoration: none; color: rgb(201, 201, 201);}
 /* header universel */
 header {
     position: fixed;
@@ -23,15 +23,33 @@ header {
 header:hover {
     background: rgba(0, 0, 0, 0.8);
 }
+header .h5:hover, header span, footer a:hover {
+    color: #FFC107;
+}
 
 img {
     display: flex;
     align-items: center;
 }
 
+footer { margin: 1em; }
+
 /* ------------------ Page index-timeline.html ------------------ */
+.accueil {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.accueil img {
+    width: 35%;
+    border-radius: 15px;
+}
 
+.accueil .btn {
+    margin: 20px;
+}
 
 /* ------------------ Page index-timeline.html ------------------ */
 .timeline {
@@ -179,4 +197,28 @@ img {
 .grace    .card {border: 5px solid #1a81bc;}
 .margaret .card {border: 5px solid #9b59b6;}
 
+
 /* ------------------ Page index-contact.html ------------------- */
+.contact {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact img {
+    width: 35%;
+    border-radius: 15px;
+}
+
+.contact .btn {
+    margin: 20px;
+}
+
+.contact form {
+    color: rgb(201, 201, 201);
+}
+
+.contact form div {
+    margin-top: 10px;
+}
