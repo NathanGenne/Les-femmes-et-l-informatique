@@ -1,12 +1,10 @@
 html, body {
-    margin: 0;
-    padding: 0;
     font-family: Helvetica, sans-serif;
-}
-body {
     background: #25303B;
 }
-
+a {text-decoration: none;}
+header a:link,header a:visited,header a:hover,header a:active { text-decoration: none; color: rgb(201, 201, 201);}
+/* header universel */
 header {
     position: fixed;
     height: 100px;
@@ -17,8 +15,9 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    color: #fff;
-    padding: 10px;
+    align-items: center;
+    color: rgb(201, 201, 201);
+    padding: 25px;
     transition: background-color ease-in-out 1s;
 }
 header:hover {
@@ -30,6 +29,9 @@ img {
     align-items: center;
 }
 
+/* ------------------ Page index-timeline.html ------------------ */
+
+
 
 /* ------------------ Page index-timeline.html ------------------ */
 .timeline {
@@ -37,6 +39,8 @@ img {
     margin: 20px auto;
     position: relative;
 }
+
+/* création de la ligne chronologique */
 .timeline:before {
     content: '';
     display: block;
@@ -48,34 +52,43 @@ img {
     height: 100%;
     background: rgba(255,255,255,0.2);
 }
+
 .timeline article {
     width: 100%;
     margin: 0 0 20px 0;
     position: relative;
 }
+
+/* structuration des cadres */
 .timeline article:after {
     content: '';
     display: block;
     clear: both;
 }
+
 .timeline .inner {
     width: 40%;
     float: left;
-    margin: 5px 0 0 0;
+    margin: 45px 0 0 0;
     border-radius: 6px;
 }
+
+/* gestion des cercles de dates et des dates */
 .timeline .year {
     display: block;
     width: 100px;
     height: 100px;
     padding: 5px 0;
+    
     position: absolute;
     top: 0;
     left: 50%;
-    margin: 20px 0 0 -52px; /*décallage des modules de date de 30px (moitié du diamètre du cercle) + 2px (largeur de la ligne de temps)*/
+    margin: 20px 0 0 -52px;
     border-radius: 100%;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 900;
+    letter-spacing: 6px;
+
     text-transform: uppercase;
     text-align: center;
     
@@ -85,6 +98,7 @@ img {
     box-shadow: 0 0 0 7px #25303B; /* sépare le block date de la ligne chronologique */
 }
 
+/* création des titres de modules */
 .timeline .inner h2 {
     padding: 15px;
     margin: 0;
@@ -94,15 +108,19 @@ img {
     border-radius: 6px 6px 0 0;
     position: relative;
 }
+
+/* création des flèches de couleur */
 .timeline .inner h2:after {
     content: '';
     position: absolute;
     top: 20px;
     right: -5px;
-        width: 10px; 
-        height: 10px;
+    width: 10px; 
+    height: 10px;
     -webkit-transform: rotate(-45deg);
 }
+
+/* création des textes sous les modules */
 .timeline .inner p {
     padding: 15px;
     margin: 0;
@@ -111,41 +129,54 @@ img {
     color: #656565;
     border-radius: 0 0 6px 6px;
 }
+
+/* décallage des modules pairs à gauche */
 .timeline article:nth-child(2n+2) .inner {
     float: right;
 }
 .timeline article:nth-child(2n+2) .inner h2:after {
     left: -5px;
 }
-.timeline article:nth-child(1) .inner h2 {
+
+/* initiation des couleurs des cadres de titre et de leurs flèches */
+.timeline article:nth-child(1) .inner h2, .timeline article:nth-child(1) .inner h2:after {
     background: #e74c3c;
 }
-.timeline article:nth-child(1) .inner h2:after {
-    background: #e74c3c;
-}
-.timeline article:nth-child(2) .inner h2 {
+.timeline article:nth-child(2) .inner h2, .timeline article:nth-child(2) .inner h2:after {
     background: #2ecc71;
 }
-.timeline article:nth-child(2) .inner h2:after {
-    background: #2ecc71;
-}
-.timeline article:nth-child(3) .inner h2 {
+.timeline article:nth-child(3) .inner h2, .timeline article:nth-child(3) .inner h2:after {
     background: #e67e22;
 }
-.timeline article:nth-child(3) .inner h2:after {
-    background: #e67e22;
+.timeline article:nth-child(4) .inner h2, .timeline article:nth-child(4) .inner h2:after {
+    background: #1a81bc;
 }
-.timeline article:nth-child(4) .inner h2 {
-    background: #1abc9c;
-}
-.timeline article:nth-child(4) .inner h2:after {
-    background: #1abc9c;
-}
-.timeline article:nth-child(5) .inner h2 {
+.timeline article:nth-child(5) .inner h2, .timeline article:nth-child(5) .inner h2:after {
     background: #9b59b6;
 }
-.timeline article:nth-child(5) .inner h2:after {
-    background: #9b59b6;
+
+/* --------------------- Pages femme.html ------------------- */
+.structure-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.card {
+    width: 35em;
+    padding-top: 1em;
+    margin-top: 3em;
+    align-items: center;
+    border-radius: 6px;
+}
+.card img {
+    max-width: 25em;
+    border-radius: 15px;
+}
+
+.ada      .card {border: 5px solid #e74c3c;}
+.hedy     .card {border: 5px solid #2ecc71;}
+.jean     .card {border: 5px solid #e67e22;}
+.grace    .card {border: 5px solid #1a81bc;}
+.margaret .card {border: 5px solid #9b59b6;}
 
 /* ------------------ Page index-contact.html ------------------- */
