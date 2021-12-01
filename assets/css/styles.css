@@ -2,6 +2,7 @@ html, body {
     font-family: Helvetica, sans-serif;
     background: #25303B;
 }
+body { margin-bottom: 2em; }
 a {text-decoration: none;}
 header a:link,header a:visited,header a:hover,header a:active, footer a { text-decoration: none; color: rgb(201, 201, 201);}
 /* header universel */
@@ -33,10 +34,7 @@ img {
 }
 
 footer { margin: 1em; }
-iframe {
-    margin-bottom: 50px;
-    border: 5px solid #FFC107;
-}
+iframe { border: 5px solid #FFC107; }
 
 /* ------------------ Page index-timeline.html ------------------ */
 .accueil {
